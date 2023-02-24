@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManufacturerFinder.MainPage"
+             Title="Device Information">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*">
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Model"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Device_Model}"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Manufacturer"/>
+                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Device_Manufacturer}"/>
+
+                <Label Grid.Column="0" Grid.Row="2" Text="Name"/>
+                <Label Grid.Column="1" Grid.Row="2" Text="{Binding Device_Name}"/>
+
+                <Label Grid.Column="0" Grid.Row="3" Text="OS Version"/>
+                <Label Grid.Column="1" Grid.Row="3" Text="{Binding Device_Version}"/>
+
+                <Label Grid.Column="0" Grid.Row="4" Text="Platform"/>
+                <Label Grid.Column="1" Grid.Row="4" Text="{Binding Device_Platform}"/>
+
+                <Label Grid.Column="0" Grid.Row="5" Text="Idiom"/>
+                <Label Grid.Column="1" Grid.Row="5" Text="{Binding Device_Idiom}"/>
+
+                <Label Grid.Column="0" Grid.Row="6" Text="Device type"/>
+                <Label Grid.Column="1" Grid.Row="6" Text="{Binding Device_DeviceType}"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
